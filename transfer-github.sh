@@ -30,8 +30,8 @@ repos=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
 # Loop through each repository and transfer it
 for repo in $repos; do
   echo "Transferring repository: $repo"
-#   curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
-#     -H "Accept: application/vnd.github.v3+json" \
-#     "https://api.github.com/repos/$SOURCE_ORG/$repo/transfer" \
-#     -d "{\"new_owner\":\"$DEST_ORG\"}"
+  curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
+    -H "Accept: application/vnd.github.v3+json" \
+    "https://api.github.com/repos/$SOURCE_ORG/$repo/transfer" \
+    -d "{\"new_owner\":\"$DEST_ORG\"}"
 done
