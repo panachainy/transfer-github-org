@@ -15,7 +15,8 @@ gh repo list SOURCE_ORG --limit 1000 --json name,sshUrl -q ".[] | .sshUrl" | xar
 ```bash
 SOURCE_ORG=source_org_name
 DEST_ORG=destination_org_name
-GITHUB_TOKEN=your_github_token
+GITHUB_TOKEN_SOURCE_ORG=your_github_token_source_org
+GITHUB_TOKEN_DEST_ORG=your_github_token_dest_org
 
-./transfer-github.sh $SOURCE_ORG $DEST_ORG $GITHUB_TOKEN
+./transfer-github.sh $SOURCE_ORG $DEST_ORG $GITHUB_TOKEN_SOURCE_ORG $GITHUB_TOKEN_DEST_ORG
 ```
