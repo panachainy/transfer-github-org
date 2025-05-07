@@ -8,8 +8,9 @@ backup
 # Authenticate with GitHub
 gh auth login
 
-# Replace 'SOURCE_ORG' with your source organization's name
-gh repo list SOURCE_ORG --limit 1000 --json name,sshUrl -q ".[] | .sshUrl" | xargs -n1 git clone
+SOURCE_ORG=source_org_name
+
+gh repo list $SOURCE_ORG --limit 1000 --json name,sshUrl -q ".[] | .sshUrl" | xargs -n1 git clone
 ```
 
 ## Push to the new org
