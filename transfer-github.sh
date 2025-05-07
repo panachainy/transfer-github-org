@@ -14,8 +14,8 @@
 # This will transfer all repositories from sourceorg to destorg using the provided token
 
 # Check if all required arguments are provided
-if [ "$#" -ne 3 ]; then
-    echo "Usage: $0 <source_org> <dest_org> <github_token>"
+if [ "$#" -ne 4 ]; then
+    echo "Usage: $0 <source_org> <dest_org> <source_token> <dest_token>"
     exit 1
 fi
 
