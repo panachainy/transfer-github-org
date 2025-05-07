@@ -1,18 +1,5 @@
 #!/bin/bash
 
-# This script demonstrates how to use the script
-#
-# Usage:
-#   ./transfer-github.sh <source_org> <dest_org> <github_token>
-#
-# Example:
-#   $ ./transfer-github.sh sourceorg destorg ghp_1234567890abcdef
-#
-# Note: Make sure to set execute permissions before running:
-#   $ chmod +x transfer-github.sh
-#
-# This will transfer all repositories from sourceorg to destorg using the provided token
-
 # Check if all required arguments are provided
 if [ "$#" -ne 4 ]; then
     echo "Usage: $0 <source_org> <dest_org> <source_token> <dest_token>"
